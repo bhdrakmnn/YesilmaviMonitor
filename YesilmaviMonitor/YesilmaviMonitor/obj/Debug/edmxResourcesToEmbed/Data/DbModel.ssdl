@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SyncModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="clcard">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACTIVE" Type="usmallint" Nullable="false" />
+    <Property Name="CARDTYPE" Type="usmallint" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="51" />
+    <Property Name="DEFINITION_" Type="varchar" MaxLength="201" Nullable="false" />
+    <Property Name="CYPHCODE" Type="varchar" MaxLength="11" />
+    <Property Name="ADDR1" Type="varchar" MaxLength="251" />
+    <Property Name="ADDR2" Type="varchar" MaxLength="251" />
+    <Property Name="CITY" Type="varchar" MaxLength="51" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="51" />
+    <Property Name="TELNRS1" Type="varchar" MaxLength="151" />
+    <Property Name="TELNRS2" Type="varchar" MaxLength="151" />
+    <Property Name="FAXNR" Type="varchar" MaxLength="151" />
+    <Property Name="TAXNR" Type="varchar" MaxLength="51" />
+    <Property Name="TAXOFFICE" Type="varchar" MaxLength="51" />
+    <Property Name="INCHARGE" Type="varchar" MaxLength="101" />
+    <Property Name="EMAILADDR" Type="varchar" MaxLength="251" />
+    <Property Name="TOWN" Type="varchar" MaxLength="51" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="80" />
+    <Property Name="DISCRATE" Type="float" />
+    <Property Name="PAYMENTREF" Type="int" />
+    <Property Name="RISKTOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACCRISKTOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACCRISKLIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACCRISKBALANCED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ACCCOLLATERAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CEK0_DEBIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CEK1_DEBIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SENET0_DEBIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SENET1_DEBIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CSTCSRISKTOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CSTCSRISKLIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RISKTYPES1" Type="smallint" />
+    <Property Name="SPECODE" Type="varchar" MaxLength="51" />
+    <Property Name="SPECODE2" Type="varchar" MaxLength="51" />
+    <Property Name="SPECODE3" Type="varchar" MaxLength="51" />
+    <Property Name="SPECODE4" Type="varchar" MaxLength="51" />
+    <Property Name="SPECODE5" Type="varchar" MaxLength="51" />
+    <Property Name="NEED_PASS_CHANGE" Type="bool" />
+    <Property Name="ITEM_GROUP_SECURITY" Type="varchar" MaxLength="250" />
+    <Property Name="IS_SUPPLIER" Type="bool" Nullable="false" />
+    <Property Name="INVENNO" Type="smallint" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="45" />
+    <Property Name="IS_LICENCED" Type="bool" Nullable="false" />
+    <Property Name="USER_MAIL" Type="varchar" MaxLength="251" />
+    <Property Name="SIPARIS_VEREBILIR" Type="bool" />
+    <Property Name="MIN_SIPARIS_TUTAR" Type="int" />
+    <Property Name="STATIC_IP" Type="varchar" MaxLength="15" />
+    <Property Name="PARENTCLREF" Type="uint" />
+    <Property Name="XML_IP" Type="varchar" MaxLength="100" />
+    <Property Name="TRADINGGRP" Type="varchar" MaxLength="17" />
+    <Property Name="VADE_KONTROLU_YAPMA" Type="bool" />
+    <Property Name="LOGOURL" Type="varchar" MaxLength="255" />
+    <Property Name="CRM_DURUM" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CARDTYPE" Type="smallint" />
+    <Property Name="CODE" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="151" Nullable="false" />
+    <Property Name="VAT" Type="float" Nullable="false" />
+    <Property Name="PAYMENTREF" Type="int" />
+    <Property Name="ACTIVE" Type="bool" Nullable="false" />
+    <Property Name="STGRPCODE" Type="varchar" MaxLength="45" />
+    <Property Name="PRODUCERCODE" Type="varchar" MaxLength="101" />
+    <Property Name="CANCONFIGURE" Type="bool" Nullable="false" />
+    <Property Name="MAKE" Type="varchar" MaxLength="45" />
+    <Property Name="UNIT" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="UNIT2" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="UNITCONVERTRATE" Type="float" Nullable="false" />
+    <Property Name="UNITSETREF" Type="int" Nullable="false" />
+    <Property Name="AMOUNT_IN_STOK" Type="float" Nullable="false" />
+    <Property Name="ACTIVE_SALES_ORDER" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="ACTIVE_PURCHASE_ORDER" Type="float" />
+    <Property Name="SAFE_LEVEL" Type="float" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="101" />
+    <Property Name="SPECODE" Type="varchar" MaxLength="50" />
+    <Property Name="SPECODE2" Type="varchar" MaxLength="50" />
+    <Property Name="SPECODE3" Type="varchar" MaxLength="50" />
+    <Property Name="SPECODE4" Type="varchar" MaxLength="50" />
+    <Property Name="SPECODE5" Type="varchar" MaxLength="50" />
+    <Property Name="TAGS" Type="varchar" MaxLength="1500" />
+    <Property Name="EXTACCESSFLAGS" Type="smallint" />
+    <Property Name="SHOW_IN_VITRIN" Type="bool" />
+    <Property Name="SHOW_IN_HAFTANIN_URUNU" Type="bool" />
+    <Property Name="PUAN_FIYAT_CARPAN" Type="float" />
+    <Property Name="PUAN_YENI_URUN_TIP" Type="smallint" />
+    <Property Name="PUAN_YENI_URUN_SABIT_PUAN" Type="int" />
+    <Property Name="PUAN_YENI_URUN_FIYAT_CARPAN" Type="float" />
+    <Property Name="DETAIL_TEXT" Type="text" />
+    <Property Name="MIN_SIPARIS_MIKTAR" Type="int" Nullable="false" />
+    <Property Name="MIN_SIPARIS_MIKTAR_BOLUNEMEZ" Type="bool" Nullable="false" />
+    <Property Name="NAME3" Type="varchar" MaxLength="201" />
+    <Property Name="NAME4" Type="varchar" MaxLength="201" />
+    <Property Name="B2CCODE" Type="varchar" MaxLength="51" />
+    <Property Name="DETAIL_HTML" Type="text" />
+    <Property Name="HAFTANIN_URUNU_SIRA" Type="int" />
+    <Property Name="ADDTAXRATE" Type="float" />
+    <Property Name="ADDTAXAMOUNT" Type="float" />
+    <Property Name="EFFECTKDV" Type="bool" />
+    <Property Name="EXTRACOSTFACTOR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EXTRACOSTITEMCODE" Type="varchar" MaxLength="45" />
+    <Property Name="EXTRACOSTEXCCLIENTS" Type="varchar" MaxLength="1700" />
+    <Property Name="CREATED_DATE" Type="datetime" Precision="0" />
+    <Property Name="MODIFIED_DATE" Type="datetime" Precision="0" />
+    <Property Name="ACTIVATED_DATE" Type="datetime" Precision="0" />
+    <Property Name="UNITCOST" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'MIKTAR' in the table 'def.b2bdebug.order_details' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'MIKTAR_ALT' in the table 'def.b2bdebug.order_details' was excluded.-->
+  <EntityType Name="order_details">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ORDERREF" Type="uint" Nullable="false" />
+    <Property Name="ITEMREF" Type="uint" Nullable="false" />
+    <Property Name="VARIANTREF" Type="int" />
+    <Property Name="SERILOTCODE" Type="varchar" MaxLength="151" />
+    <Property Name="PAYMENTREF" Type="int" />
+    <Property Name="SOURCEINDEX" Type="int" />
+    <Property Name="UOMREF" Type="int" Nullable="false" />
+    <Property Name="UINFO1" Type="float" Nullable="false" />
+    <Property Name="UINFO2" Type="float" Nullable="false" />
+    <Property Name="UNIT" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="PRICE" Type="float" Nullable="false" />
+    <Property Name="VAT" Type="usmallint" Nullable="false" />
+    <Property Name="CUR" Type="char" MaxLength="3" />
+    <Property Name="SATIS_FIYAT" Type="float" />
+    <Property Name="ISKONTO_TUTAR" Type="float" />
+    <Property Name="KDV_TUTAR" Type="float" />
+    <Property Name="NET_TUTAR" Type="float" />
+    <Property Name="PRCURR" Type="int" />
+    <Property Name="PRRATE" Type="float" />
+    <Property Name="PRPRICE" Type="float" />
+    <Property Name="TRCURR" Type="float" />
+    <Property Name="TRRATE" Type="float" />
+    <Property Name="REPORTRATE" Type="float" />
+    <Property Name="SEVKEDILEN_MIKTAR" Type="float" />
+    <Property Name="CLIENT_LOGICALREF" Type="varchar" MaxLength="50" />
+    <Property Name="SEVK_TARIH" Type="datetime" Precision="0" />
+    <Property Name="VATINC" Type="usmallint" />
+    <Property Name="ADDTAXRATE" Type="float" />
+    <Property Name="ADDTAXCONVFACT" Type="float" />
+    <Property Name="ADDTAXAMOUNT" Type="float" />
+    <Property Name="CLOSED" Type="usmallint" />
+    <Property Name="LINEEXP" Type="varchar" MaxLength="30" />
+    <Property Name="KAZANILAN_PUAN" Type="int" />
+    <Property Name="DISCOUNT_LIST" Type="varchar" MaxLength="50" />
+    <Property Name="OFFERREF" Type="int" />
+    <Property Name="OFFERLINEREF" Type="int" />
+    <Property Name="PARENTITEMREF" Type="int" />
+    <Property Name="CAMPAIGNREF" Type="int" />
+    <Property Name="KAMPAYALI_URUN_MU" Type="bool" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="uint" Nullable="false" />
+    <Property Name="B2B_ORDER_TYPE" Type="smallint" Nullable="false" />
+    <Property Name="TARIH" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="CYPHCODE" Type="varchar" MaxLength="11" />
+    <Property Name="CLIENTREF" Type="uint" />
+    <Property Name="SLSMANREF" Type="uint" />
+    <Property Name="TOPLAM" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISKONTO_ORAN" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISKONTO_ORAN_2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ISKONTO_TOPLAM" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISKONTOLU_TUTAR" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="KAPIDA_ODEME_TUTAR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="KARGO_TUTAR" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOPLAM_EKVERGI" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TOPLAM_KDV" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NET_TOPLAM" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TRCURR" Type="int" />
+    <Property Name="TRRATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="TRNET" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="REPORTRATE" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="REPORTNET" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="STATUS" Type="char" MaxLength="1" />
+    <Property Name="CLIENT_LOGICALREF" Type="varchar" MaxLength="25" />
+    <Property Name="PAYPLANREF" Type="uint" />
+    <Property Name="ACIKLAMA" Type="varchar" MaxLength="250" />
+    <Property Name="SEVK_ADRES_TIP" Type="char" MaxLength="1" />
+    <Property Name="SEVK_ADRES" Type="varchar" MaxLength="250" />
+    <Property Name="SEVK_SEHIR" Type="varchar" MaxLength="15" />
+    <Property Name="SEVK_TARIH" Type="datetime" Precision="0" />
+    <Property Name="SEVK_SEKLI" Type="varchar" MaxLength="30" />
+    <Property Name="SEVK_SEKLI_KODU" Type="varchar" MaxLength="10" />
+    <Property Name="TOPLAM_PUAN" Type="int" />
+    <Property Name="PUAN_ONAY" Type="bit" />
+    <Property Name="CLIENT_STATUS" Type="smallint" />
+    <Property Name="CLIENT_EXP" Type="varchar" MaxLength="501" />
+    <Property Name="GEO_LATITUDE" Type="float" />
+    <Property Name="GEO_LONGITUDE" Type="float" />
+    <Property Name="GEO_ALTITUDE" Type="float" />
+    <Property Name="GEO_ACCURACY" Type="float" />
+    <Property Name="CLIENT_SHIPINFOREF" Type="int" />
+    <Property Name="APPROVE1USERREF" Type="int" />
+    <Property Name="APPROVE2USERREF" Type="int" />
+    <Property Name="APPROVE3USERREF" Type="int" />
+    <Property Name="APPROVE1USERSTATE" Type="int" />
+    <Property Name="APPROVE2USERSTATE" Type="int" />
+    <Property Name="APPROVE3USERSTATE" Type="int" />
+    <Property Name="APPROVESTATE" Type="int" />
+    <Property Name="ORDERLOGISTICID" Type="int" />
+    <Property Name="SASNO" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="setup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firma_ismi" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="firma_adres" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="tel1" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="tel2" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="fax1" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="fax2" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="pesin_payplanref" Type="uint" Nullable="false" />
+    <Property Name="vadeli_payplanref" Type="uint" Nullable="false" />
+    <Property Name="logoPath" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="msn_invitee" Type="text" Nullable="false" />
+    <Property Name="sabit_iskonto" Type="bool" Nullable="false" />
+    <Property Name="odeme_plani_iskonto" Type="bool" Nullable="false" />
+    <Property Name="satis_elemani_ozel_fiyat" Type="bool" Nullable="false" />
+    <Property Name="iletisim_html" Type="text" />
+    <Property Name="satis_elemani_kdv_degistirme" Type="bool" Nullable="false" />
+    <Property Name="siparis_odeme_plani_tipi" Type="smallint" />
+    <Property Name="sanal_pos" Type="bool" Nullable="false" />
+    <Property Name="sozlesme_html" Type="text" />
+    <Property Name="musteri_fatura_aciklamasi_goster" Type="bool" />
+    <Property Name="satis_elemani_hesap_makinasi_goster" Type="bool" />
+    <Property Name="musteri_fatura_detay_goster" Type="bool" />
+    <Property Name="dovizli_fiyatlari_cevir" Type="bool" />
+    <Property Name="guvenli_stok_seviyesi_kontrolu_yap" Type="bool" />
+    <Property Name="send_mail_server" Type="varchar" MaxLength="100" />
+    <Property Name="send_mail" Type="varchar" MaxLength="100" />
+    <Property Name="send_mail_password" Type="varchar" MaxLength="100" />
+    <Property Name="banka_html" Type="text" />
+    <Property Name="siparis_mail_gonder" Type="bool" Nullable="false" />
+    <Property Name="siparis_mail_alicilar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="siparis_iptal_mail_gonder" Type="bool" Nullable="false" />
+    <Property Name="siparis_iptal_mail_alicilar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="tahsilat_mail_gonder" Type="bool" Nullable="false" />
+    <Property Name="tahsilat_mail_alicilar" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="senet_masraf_tutar" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="kargo_alt_limit" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="kargo_ucreti" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="kapida_odeme_kargo_alt_limit" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="kapida_odeme_kargo_ucreti" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="cari_kargo_ucreti_hesaplama" Type="bool" />
+  </EntityType>
+  <EntityType Name="slsman">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="DEFINITION_" Type="varchar" MaxLength="51" Nullable="false" />
+    <Property Name="SPECODE" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="CYPHCODE" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="ACTIVE" Type="uint" Nullable="false" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="IS_SUPERVISOR" Type="bool" Nullable="false" />
+    <Property Name="IS_SUPERSLSMAN" Type="bool" />
+    <Property Name="CAN_USE_VPOS" Type="bool" />
+    <Property Name="MAKBUZ_NO_PREFIX" Type="varchar" MaxLength="3" />
+    <Property Name="MAKBUZ_NO_LAST" Type="int" />
+    <Property Name="ITEM_GROUP_SECURITY" Type="varchar" MaxLength="250" />
+    <Property Name="INVENNO" Type="smallint" />
+    <Property Name="SLSMAN_TYPE" Type="smallint" Nullable="false" />
+    <Property Name="RELATED_CLIENTREF" Type="int" />
+    <Property Name="IS_LICENCED" Type="bool" Nullable="false" />
+    <Property Name="FAIZ_UYGULANSINMI" Type="bool" Nullable="false" />
+    <Property Name="PICTURE_URL" Type="varchar" MaxLength="100" />
+    <Property Name="TELNUMBER" Type="varchar" MaxLength="30" />
+    <Property Name="STATIC_IP" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL_ADDR" Type="varchar" MaxLength="250" />
+    <Property Name="PRCLIST_PRIORITY" Type="usmallint" />
+  </EntityType>
+  <EntityType Name="sync_config">
+    <Key>
+      <PropertyRef Name="Anahtar" />
+    </Key>
+    <Property Name="Anahtar" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Deger" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sync_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarih" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Islem" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Seviye" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Logger" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Mesaj" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Hata" Type="varchar" MaxLength="2000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sync_status">
+    <Key>
+      <PropertyRef Name="Anahtar" />
+    </Key>
+    <Property Name="Anahtar" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Deger" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="virtualpos">
+    <Key>
+      <PropertyRef Name="VPOSREF" />
+    </Key>
+    <Property Name="VPOSREF" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="varchar" MaxLength="20" />
+    <Property Name="BANKACCREF" Type="int" />
+    <Property Name="SHOPNO" Type="varchar" MaxLength="20" />
+    <Property Name="TERMINALNO" Type="varchar" MaxLength="20" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="30" />
+    <Property Name="PASSWORD" Type="varchar" MaxLength="30" />
+    <Property Name="STOREKEY" Type="varchar" MaxLength="48" />
+    <Property Name="IMAGEURL" Type="varchar" MaxLength="250" />
+    <Property Name="APIGATEURL" Type="varchar" MaxLength="250" />
+    <Property Name="D3GATEURL" Type="varchar" MaxLength="250" />
+    <Property Name="QUERYTRANSURL" Type="varchar" MaxLength="250" />
+    <Property Name="VADEFARKI" Type="float" />
+    <Property Name="IS3D" Type="bool" />
+    <Property Name="ISPOSNET" Type="bool" />
+    <Property Name="ISGARANTI" Type="bool" />
+    <Property Name="ISIPAY" Type="bool" />
+    <Property Name="ISORTAKODEME" Type="bool" />
+    <Property Name="ISVAKIF" Type="bool" />
+    <Property Name="ISKUVEYT" Type="bool" />
+    <Property Name="ISVPOSQNBFINANSBANK" Type="bool" />
+    <Property Name="DEFAULTVPOS" Type="bool" />
+    <Property Name="FLAGS" Type="char" MaxLength="1" />
+    <Property Name="PAYPLANCODE" Type="varchar" MaxLength="25" />
+    <Property Name="ANARENK" Type="varchar" MaxLength="25" />
+    <Property Name="TEKCEKIMVARMI" Type="bool" />
+    <Property Name="BINEXTRA" Type="varchar" MaxLength="500" />
+    <Property Name="ACTIVE" Type="bool" />
+  </EntityType>
+  <EntityType Name="virtualpos_trans">
+    <Key>
+      <PropertyRef Name="logicalref" />
+    </Key>
+    <Property Name="logicalref" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="clientref" Type="int" Nullable="false" />
+    <Property Name="subclientref" Type="int" />
+    <Property Name="slsmanref" Type="int" />
+    <Property Name="cyphcode" Type="varchar" MaxLength="11" />
+    <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="vposref" Type="int" Nullable="false" />
+    <Property Name="logobankaccref" Type="int" />
+    <Property Name="vtaksitref" Type="int" />
+    <Property Name="vclientid" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="taksit_sayi" Type="smallint" Nullable="false" />
+    <Property Name="anapara" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="toplam" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="trcurr" Type="smallint" />
+    <Property Name="trrate" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="trnet" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="reportrate" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="reportnet" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="maskedpan" Type="varchar" MaxLength="100" />
+    <Property Name="cardholder" Type="varchar" MaxLength="80" />
+    <Property Name="tranid" Type="varchar" MaxLength="60" />
+    <Property Name="authcode" Type="varchar" MaxLength="60" />
+    <Property Name="hostrefnum" Type="varchar" MaxLength="60" />
+    <Property Name="response" Type="varchar" MaxLength="20" />
+    <Property Name="mdstatus" Type="varchar" MaxLength="5" />
+    <Property Name="mderrmsg" Type="varchar" MaxLength="100" />
+    <Property Name="client_logicalref1" Type="int" />
+    <Property Name="client_logicalref2" Type="int" />
+    <Property Name="status" Type="smallint" Nullable="false" />
+    <Property Name="orderref" Type="int" />
+  </EntityType>
+  <EntityContainer Name="SyncModelStoreContainer">
+    <EntitySet Name="clcard" EntityType="Self.clcard" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="items" EntityType="Self.items" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="order_details" EntityType="Self.order_details" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="setup" EntityType="Self.setup" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="slsman" EntityType="Self.slsman" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="sync_config" EntityType="Self.sync_config" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="sync_log" EntityType="Self.sync_log" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="sync_status" EntityType="Self.sync_status" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="virtualpos" EntityType="Self.virtualpos" Schema="b2bdebug" store:Type="Tables" />
+    <EntitySet Name="virtualpos_trans" EntityType="Self.virtualpos_trans" Schema="b2bdebug" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

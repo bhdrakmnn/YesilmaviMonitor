@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SyncModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sync_config">
+    <Key>
+      <PropertyRef Name="Anahtar" />
+    </Key>
+    <Property Name="Anahtar" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deger" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sync_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" />
+    <Property Name="Islem" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Seviye" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Logger" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mesaj" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hata" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sync_status">
+    <Key>
+      <PropertyRef Name="Anahtar" />
+    </Key>
+    <Property Name="Anahtar" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Deger" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="b2bdebugEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sync_config" EntityType="Self.sync_config" />
+    <EntitySet Name="sync_log" EntityType="Self.sync_log" />
+    <EntitySet Name="sync_status" EntityType="Self.sync_status" />
+    <EntitySet Name="setup" EntityType="SyncModel.setup" />
+    <EntitySet Name="orders" EntityType="SyncModel.orders" />
+    <EntitySet Name="virtualpos_trans" EntityType="SyncModel.virtualpos_trans" />
+    <EntitySet Name="order_details" EntityType="SyncModel.order_details" />
+    <EntitySet Name="clcard" EntityType="SyncModel.clcard" />
+    <EntitySet Name="items" EntityType="SyncModel.items" />
+    <EntitySet Name="slsman" EntityType="SyncModel.slsman" />
+    <EntitySet Name="virtualpos" EntityType="SyncModel.virtualpos" />
+  </EntityContainer>
+  <EntityType Name="setup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firma_ismi" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="firma_adres" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="tel1" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="tel2" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="fax1" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="fax2" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pesin_payplanref" Type="Int64" Nullable="false" />
+    <Property Name="vadeli_payplanref" Type="Int64" Nullable="false" />
+    <Property Name="logoPath" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="msn_invitee" Type="String" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="sabit_iskonto" Type="Boolean" Nullable="false" />
+    <Property Name="odeme_plani_iskonto" Type="Boolean" Nullable="false" />
+    <Property Name="satis_elemani_ozel_fiyat" Type="Boolean" Nullable="false" />
+    <Property Name="iletisim_html" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="satis_elemani_kdv_degistirme" Type="Boolean" Nullable="false" />
+    <Property Name="siparis_odeme_plani_tipi" Type="Int16" />
+    <Property Name="sanal_pos" Type="Boolean" Nullable="false" />
+    <Property Name="sozlesme_html" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="musteri_fatura_aciklamasi_goster" Type="Boolean" />
+    <Property Name="satis_elemani_hesap_makinasi_goster" Type="Boolean" />
+    <Property Name="musteri_fatura_detay_goster" Type="Boolean" />
+    <Property Name="dovizli_fiyatlari_cevir" Type="Boolean" />
+    <Property Name="guvenli_stok_seviyesi_kontrolu_yap" Type="Boolean" />
+    <Property Name="send_mail_server" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="send_mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="send_mail_password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="banka_html" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="siparis_mail_gonder" Type="Boolean" Nullable="false" />
+    <Property Name="siparis_mail_alicilar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="siparis_iptal_mail_gonder" Type="Boolean" Nullable="false" />
+    <Property Name="siparis_iptal_mail_alicilar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="tahsilat_mail_gonder" Type="Boolean" Nullable="false" />
+    <Property Name="tahsilat_mail_alicilar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="senet_masraf_tutar" Type="Decimal" Nullable="false" />
+    <Property Name="kargo_alt_limit" Type="Decimal" Nullable="false" />
+    <Property Name="kargo_ucreti" Type="Decimal" Nullable="false" />
+    <Property Name="kapida_odeme_kargo_alt_limit" Type="Decimal" Nullable="false" />
+    <Property Name="kapida_odeme_kargo_ucreti" Type="Decimal" Nullable="false" />
+    <Property Name="cari_kargo_ucreti_hesaplama" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="Int64" Nullable="false" />
+    <Property Name="B2B_ORDER_TYPE" Type="Int16" Nullable="false" />
+    <Property Name="TARIH" Type="DateTime" Nullable="false" />
+    <Property Name="CYPHCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="CLIENTREF" Type="Int64" />
+    <Property Name="SLSMANREF" Type="Int64" />
+    <Property Name="TOPLAM" Type="Decimal" Nullable="false" />
+    <Property Name="ISKONTO_ORAN" Type="Decimal" Nullable="false" />
+    <Property Name="ISKONTO_ORAN_2" Type="Decimal" />
+    <Property Name="ISKONTO_TOPLAM" Type="Decimal" Nullable="false" />
+    <Property Name="ISKONTOLU_TUTAR" Type="Decimal" Nullable="false" />
+    <Property Name="KAPIDA_ODEME_TUTAR" Type="Decimal" />
+    <Property Name="KARGO_TUTAR" Type="Decimal" />
+    <Property Name="TOPLAM_EKVERGI" Type="Decimal" Nullable="false" />
+    <Property Name="TOPLAM_KDV" Type="Decimal" Nullable="false" />
+    <Property Name="NET_TOPLAM" Type="Decimal" Nullable="false" />
+    <Property Name="TRCURR" Type="Int32" />
+    <Property Name="TRRATE" Type="Decimal" />
+    <Property Name="TRNET" Type="Decimal" />
+    <Property Name="REPORTRATE" Type="Decimal" />
+    <Property Name="REPORTNET" Type="Decimal" />
+    <Property Name="STATUS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="CLIENT_LOGICALREF" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PAYPLANREF" Type="Int64" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_ADRES_TIP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_ADRES" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_SEHIR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_TARIH" Type="DateTime" />
+    <Property Name="SEVK_SEKLI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_SEKLI_KODU" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TOPLAM_PUAN" Type="Int32" />
+    <Property Name="PUAN_ONAY" Type="Boolean" />
+    <Property Name="CLIENT_STATUS" Type="Int16" />
+    <Property Name="CLIENT_EXP" Type="String" MaxLength="501" FixedLength="false" Unicode="false" />
+    <Property Name="GEO_LATITUDE" Type="Single" />
+    <Property Name="GEO_LONGITUDE" Type="Single" />
+    <Property Name="GEO_ALTITUDE" Type="Single" />
+    <Property Name="GEO_ACCURACY" Type="Single" />
+    <Property Name="CLIENT_SHIPINFOREF" Type="Int32" />
+    <Property Name="APPROVE1USERREF" Type="Int32" />
+    <Property Name="APPROVE2USERREF" Type="Int32" />
+    <Property Name="APPROVE3USERREF" Type="Int32" />
+    <Property Name="APPROVE1USERSTATE" Type="Int32" />
+    <Property Name="APPROVE2USERSTATE" Type="Int32" />
+    <Property Name="APPROVE3USERSTATE" Type="Int32" />
+    <Property Name="APPROVESTATE" Type="Int32" />
+    <Property Name="ORDERLOGISTICID" Type="Int32" />
+    <Property Name="SASNO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="virtualpos_trans">
+    <Key>
+      <PropertyRef Name="logicalref" />
+    </Key>
+    <Property Name="logicalref" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clientref" Type="Int32" Nullable="false" />
+    <Property Name="subclientref" Type="Int32" />
+    <Property Name="slsmanref" Type="Int32" />
+    <Property Name="cyphcode" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="vposref" Type="Int32" Nullable="false" />
+    <Property Name="logobankaccref" Type="Int32" />
+    <Property Name="vtaksitref" Type="Int32" />
+    <Property Name="vclientid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="taksit_sayi" Type="Int16" Nullable="false" />
+    <Property Name="anapara" Type="Decimal" Nullable="false" />
+    <Property Name="toplam" Type="Decimal" Nullable="false" />
+    <Property Name="trcurr" Type="Int16" />
+    <Property Name="trrate" Type="Decimal" />
+    <Property Name="trnet" Type="Decimal" />
+    <Property Name="reportrate" Type="Decimal" />
+    <Property Name="reportnet" Type="Decimal" />
+    <Property Name="maskedpan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cardholder" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="tranid" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="authcode" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="hostrefnum" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="response" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="mdstatus" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="mderrmsg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="client_logicalref1" Type="Int32" />
+    <Property Name="client_logicalref2" Type="Int32" />
+    <Property Name="status" Type="Int16" Nullable="false" />
+    <Property Name="orderref" Type="Int32" />
+  </EntityType>
+  <EntityType Name="order_details">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ORDERREF" Type="Int64" Nullable="false" />
+    <Property Name="ITEMREF" Type="Int64" Nullable="false" />
+    <Property Name="VARIANTREF" Type="Int32" />
+    <Property Name="SERILOTCODE" Type="String" MaxLength="151" FixedLength="false" Unicode="false" />
+    <Property Name="PAYMENTREF" Type="Int32" />
+    <Property Name="SOURCEINDEX" Type="Int32" />
+    <Property Name="UOMREF" Type="Int32" Nullable="false" />
+    <Property Name="UINFO1" Type="Single" Nullable="false" />
+    <Property Name="UINFO2" Type="Single" Nullable="false" />
+    <Property Name="UNIT" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PRICE" Type="Single" Nullable="false" />
+    <Property Name="VAT" Type="Int32" Nullable="false" />
+    <Property Name="CUR" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="SATIS_FIYAT" Type="Single" />
+    <Property Name="ISKONTO_TUTAR" Type="Single" />
+    <Property Name="KDV_TUTAR" Type="Single" />
+    <Property Name="NET_TUTAR" Type="Single" />
+    <Property Name="PRCURR" Type="Int32" />
+    <Property Name="PRRATE" Type="Single" />
+    <Property Name="PRPRICE" Type="Single" />
+    <Property Name="TRCURR" Type="Single" />
+    <Property Name="TRRATE" Type="Single" />
+    <Property Name="REPORTRATE" Type="Single" />
+    <Property Name="SEVKEDILEN_MIKTAR" Type="Single" />
+    <Property Name="CLIENT_LOGICALREF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEVK_TARIH" Type="DateTime" />
+    <Property Name="VATINC" Type="Int32" />
+    <Property Name="ADDTAXRATE" Type="Single" />
+    <Property Name="ADDTAXCONVFACT" Type="Single" />
+    <Property Name="ADDTAXAMOUNT" Type="Single" />
+    <Property Name="CLOSED" Type="Int32" />
+    <Property Name="LINEEXP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="KAZANILAN_PUAN" Type="Int32" />
+    <Property Name="DISCOUNT_LIST" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OFFERREF" Type="Int32" />
+    <Property Name="OFFERLINEREF" Type="Int32" />
+    <Property Name="PARENTITEMREF" Type="Int32" />
+    <Property Name="CAMPAIGNREF" Type="Int32" />
+    <Property Name="KAMPAYALI_URUN_MU" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="clcard">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ACTIVE" Type="Int32" Nullable="false" />
+    <Property Name="CARDTYPE" Type="Int32" Nullable="false" />
+    <Property Name="CODE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINITION_" Type="String" Nullable="false" MaxLength="201" FixedLength="false" Unicode="false" />
+    <Property Name="CYPHCODE" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ADDR1" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+    <Property Name="ADDR2" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="TELNRS1" Type="String" MaxLength="151" FixedLength="false" Unicode="false" />
+    <Property Name="TELNRS2" Type="String" MaxLength="151" FixedLength="false" Unicode="false" />
+    <Property Name="FAXNR" Type="String" MaxLength="151" FixedLength="false" Unicode="false" />
+    <Property Name="TAXNR" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="TAXOFFICE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="INCHARGE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+    <Property Name="EMAILADDR" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+    <Property Name="TOWN" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DISCRATE" Type="Single" />
+    <Property Name="PAYMENTREF" Type="Int32" />
+    <Property Name="RISKTOTAL" Type="Decimal" />
+    <Property Name="ACCRISKTOTAL" Type="Decimal" />
+    <Property Name="ACCRISKLIMIT" Type="Decimal" />
+    <Property Name="ACCRISKBALANCED" Type="Decimal" />
+    <Property Name="ACCCOLLATERAL" Type="Decimal" />
+    <Property Name="CEK0_DEBIT" Type="Decimal" />
+    <Property Name="CEK1_DEBIT" Type="Decimal" />
+    <Property Name="SENET0_DEBIT" Type="Decimal" />
+    <Property Name="SENET1_DEBIT" Type="Decimal" />
+    <Property Name="CSTCSRISKTOTAL" Type="Decimal" />
+    <Property Name="CSTCSRISKLIMIT" Type="Decimal" />
+    <Property Name="RISKTYPES1" Type="Int16" />
+    <Property Name="SPECODE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE2" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE3" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE4" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE5" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="NEED_PASS_CHANGE" Type="Boolean" />
+    <Property Name="ITEM_GROUP_SECURITY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SUPPLIER" Type="Boolean" Nullable="false" />
+    <Property Name="INVENNO" Type="Int16" Nullable="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="IS_LICENCED" Type="Boolean" Nullable="false" />
+    <Property Name="USER_MAIL" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+    <Property Name="SIPARIS_VEREBILIR" Type="Boolean" />
+    <Property Name="MIN_SIPARIS_TUTAR" Type="Int32" />
+    <Property Name="STATIC_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PARENTCLREF" Type="Int64" />
+    <Property Name="XML_IP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TRADINGGRP" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="VADE_KONTROLU_YAPMA" Type="Boolean" />
+    <Property Name="LOGOURL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CRM_DURUM" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CARDTYPE" Type="Int16" />
+    <Property Name="CODE" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="151" FixedLength="false" Unicode="false" />
+    <Property Name="VAT" Type="Single" Nullable="false" />
+    <Property Name="PAYMENTREF" Type="Int32" />
+    <Property Name="ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="STGRPCODE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PRODUCERCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+    <Property Name="CANCONFIGURE" Type="Boolean" Nullable="false" />
+    <Property Name="MAKE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="UNIT" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="UNIT2" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="UNITCONVERTRATE" Type="Single" Nullable="false" />
+    <Property Name="UNITSETREF" Type="Int32" Nullable="false" />
+    <Property Name="AMOUNT_IN_STOK" Type="Single" Nullable="false" />
+    <Property Name="ACTIVE_SALES_ORDER" Type="Decimal" />
+    <Property Name="ACTIVE_PURCHASE_ORDER" Type="Single" />
+    <Property Name="SAFE_LEVEL" Type="Single" />
+    <Property Name="BARCODE" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAGS" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="EXTACCESSFLAGS" Type="Int16" />
+    <Property Name="SHOW_IN_VITRIN" Type="Boolean" />
+    <Property Name="SHOW_IN_HAFTANIN_URUNU" Type="Boolean" />
+    <Property Name="PUAN_FIYAT_CARPAN" Type="Single" />
+    <Property Name="PUAN_YENI_URUN_TIP" Type="Int16" />
+    <Property Name="PUAN_YENI_URUN_SABIT_PUAN" Type="Int32" />
+    <Property Name="PUAN_YENI_URUN_FIYAT_CARPAN" Type="Single" />
+    <Property Name="DETAIL_TEXT" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="MIN_SIPARIS_MIKTAR" Type="Int32" Nullable="false" />
+    <Property Name="MIN_SIPARIS_MIKTAR_BOLUNEMEZ" Type="Boolean" Nullable="false" />
+    <Property Name="NAME3" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+    <Property Name="NAME4" Type="String" MaxLength="201" FixedLength="false" Unicode="false" />
+    <Property Name="B2CCODE" Type="String" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="DETAIL_HTML" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="HAFTANIN_URUNU_SIRA" Type="Int32" />
+    <Property Name="ADDTAXRATE" Type="Single" />
+    <Property Name="ADDTAXAMOUNT" Type="Single" />
+    <Property Name="EFFECTKDV" Type="Boolean" />
+    <Property Name="EXTRACOSTFACTOR" Type="Decimal" />
+    <Property Name="EXTRACOSTITEMCODE" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EXTRACOSTEXCCLIENTS" Type="String" MaxLength="1700" FixedLength="false" Unicode="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" />
+    <Property Name="ACTIVATED_DATE" Type="DateTime" />
+    <Property Name="UNITCOST" Type="Decimal" />
+  </EntityType>
+  <EntityType Name="slsman">
+    <Key>
+      <PropertyRef Name="LOGICALREF" />
+    </Key>
+    <Property Name="LOGICALREF" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINITION_" Type="String" Nullable="false" MaxLength="51" FixedLength="false" Unicode="false" />
+    <Property Name="SPECODE" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="CYPHCODE" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVE" Type="Int64" Nullable="false" />
+    <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SUPERVISOR" Type="Boolean" Nullable="false" />
+    <Property Name="IS_SUPERSLSMAN" Type="Boolean" />
+    <Property Name="CAN_USE_VPOS" Type="Boolean" />
+    <Property Name="MAKBUZ_NO_PREFIX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MAKBUZ_NO_LAST" Type="Int32" />
+    <Property Name="ITEM_GROUP_SECURITY" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="INVENNO" Type="Int16" />
+    <Property Name="SLSMAN_TYPE" Type="Int16" Nullable="false" />
+    <Property Name="RELATED_CLIENTREF" Type="Int32" />
+    <Property Name="IS_LICENCED" Type="Boolean" Nullable="false" />
+    <Property Name="FAIZ_UYGULANSINMI" Type="Boolean" Nullable="false" />
+    <Property Name="PICTURE_URL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TELNUMBER" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="STATIC_IP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL_ADDR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PRCLIST_PRIORITY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="virtualpos">
+    <Key>
+      <PropertyRef Name="VPOSREF" />
+    </Key>
+    <Property Name="VPOSREF" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BANKACCREF" Type="Int32" />
+    <Property Name="SHOPNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TERMINALNO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="STOREKEY" Type="String" MaxLength="48" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGEURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="APIGATEURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="D3GATEURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QUERYTRANSURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="VADEFARKI" Type="Single" />
+    <Property Name="IS3D" Type="Boolean" />
+    <Property Name="ISPOSNET" Type="Boolean" />
+    <Property Name="ISGARANTI" Type="Boolean" />
+    <Property Name="ISIPAY" Type="Boolean" />
+    <Property Name="ISORTAKODEME" Type="Boolean" />
+    <Property Name="ISVAKIF" Type="Boolean" />
+    <Property Name="ISKUVEYT" Type="Boolean" />
+    <Property Name="ISVPOSQNBFINANSBANK" Type="Boolean" />
+    <Property Name="DEFAULTVPOS" Type="Boolean" />
+    <Property Name="FLAGS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PAYPLANCODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ANARENK" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="TEKCEKIMVARMI" Type="Boolean" />
+    <Property Name="BINEXTRA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVE" Type="Boolean" />
+  </EntityType>
+</Schema>

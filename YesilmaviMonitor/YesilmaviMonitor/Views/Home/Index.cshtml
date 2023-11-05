@@ -1,0 +1,94 @@
+﻿@model List<YesilmaviMonitor.Models.MonitorModel>
+
+@{
+    ViewBag.Title = "Anasayfa";
+}
+
+<meta http-equiv="refresh" content="180;url=" />
+    
+    @foreach (var item in Model)
+    {
+        //if (item.CustomerInfo != null)
+        //{
+        //if (item.syncStatusList != null && item.syncStatusList.Count > 0)
+        //{
+                <div class="col-md-2">
+                    <div style="height:270px !important" class="card h-100">
+                        <div class="card-body text-center">
+                            @if (item.CustomerInfo.firma_ismi != null)
+                            {
+
+                                <img style="width:95px !important" src="https://@item.CustomerInfo.fax2/@item.CustomerInfo.logoPath" class="card-img-top" alt="@item.CustomerInfo.firma_ismi">
+                                <br />
+                                <br />
+                                <h6 class="card-title"><i class="fa fa-briefcase"></i> @item.CustomerInfo.firma_ismi</h6>
+                            }
+
+                            @if (item.CustomerName != null)
+                            {
+                                <span><i class="fa fa-database"></i> @item.DataBaseName</span>
+                                <br />
+                                <br />
+                            }
+                            @if (item.waitingOrdersCount == 0 && item.waitingCreditCardCount == 0)
+                            {
+                                <span class="badge badge-primary"><i class="fa fa-truck  fa-2x"></i> @item.waitingOrdersCount</span>
+                                <span class="badge badge-primary"><i class="fa fa-credit-card fa-2x"></i> @item.waitingCreditCardCount</span>
+                            }
+                            else if (item.waitingCreditCardCount != 0)
+                            {
+                                <span class="badge badge-primary"><i class="fa fa-truck  fa-2x"></i> @item.waitingOrdersCount</span>
+                                <span class="badge badge-danger"><i class="fa fa-credit-card fa-2x"></i> @item.waitingCreditCardCount</span>
+                            }
+                            else if (item.waitingOrdersCount != 0)
+                            {
+                                <span class="badge badge-danger"><i class="fa fa-truck  fa-2x"></i> @item.waitingOrdersCount</span>
+                                <span class="badge badge-primary"><i class="fa fa-credit-card fa-2x"></i> @item.waitingCreditCardCount</span>
+                            }
+                            else
+                            {
+                                <span class="badge badge-danger"><i class="fa fa-truck  fa-2x"></i> @item.waitingOrdersCount</span>
+                                <span class="badge badge-danger"><i class="fa fa-credit-card fa-2x"></i> @item.waitingCreditCardCount</span>
+                            }
+                        </div>
+
+                        <div class="card-footer  text-center">
+                            @if (item.syncStatusList != null && item.syncStatusList.Count > 0)
+                            {
+
+
+                                DateTime sonGorulme = DateTime.Parse(item.syncStatusList.First().Deger);
+
+                                if ((DateTime.Now - sonGorulme).TotalMinutes > 15)
+                                {
+
+                                    <a href="@Url.Action("Details","Home", new {@dbName = item.DataBaseName})"> <small class="text-muted btn btn-danger" style="color:white !important;"><i class="zmdi zmdi-time"></i> @item.syncStatusList.First().Deger</small></a>
+                                    <i style="color: #e93e3b; margin-top: -207px !important; margin-left: 25px !important; position: absolute; " class="fa fa-arrow-circle-down  fa-2x"></i>
+                                    @*<i style="color: #ffea04;; margin-top: -180px !important; margin-left: 25px !important; position: absolute; " class="fa fa-minus-circle  fa-2x"></i>*@
+
+                                }
+
+                                else if (item.waitingCreditCardCount > 0 || item.waitingOrdersCount > 0)
+                                {
+                                    <a href="@Url.Action("Details", "Home", new {@dbName = item.DataBaseName })"> <small class="text-muted btn btn-warning" style="color:black !important;"><i class="zmdi zmdi-time"></i> @item.syncStatusList.First().Deger</small></a>
+                                    <i style="color: #ffea04; margin-top: -207px !important; margin-left: 25px !important; position: absolute; " class="fa fa-minus-circle  fa-2x"></i>
+                                }
+                                else if ((DateTime.Now - sonGorulme).TotalMinutes > 15)
+                                {
+
+                                    <a href="@Url.Action("Details","Home", new {@dbName = item.DataBaseName})"> <small class="text-muted btn btn-danger" style="color:white !important;"><i class="zmdi zmdi-time"></i> @item.syncStatusList.First().Deger</small></a>
+                                    <i style="color: #e93e3b; margin-top: -207px !important; margin-left: 25px !important; position: absolute; " class="fa fa-arrow-circle-down  fa-2x"></i>
+
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("Details","Home", new {@dbName = item.DataBaseName})"> <small class="text-muted btn btn-success" style="color:white !important;"><i class="zmdi zmdi-time"></i> @item.syncStatusList.First().Deger</small></a>
+                                    <i style="color: #50d294; margin-top: -207px !important; margin-left: 25px !important; position: absolute;" class="fa fa-arrow-circle-up  fa-2x"></i>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            @*}*@
+        @*}*@
+    }

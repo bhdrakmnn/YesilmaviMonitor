@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SyncModelStoreContainer" CdmEntityContainer="b2bdebugEntities">
+    <EntitySetMapping Name="sync_config">
+      <EntityTypeMapping TypeName="SyncModel.sync_config">
+        <MappingFragment StoreEntitySet="sync_config">
+          <ScalarProperty Name="Anahtar" ColumnName="Anahtar" />
+          <ScalarProperty Name="Deger" ColumnName="Deger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sync_log">
+      <EntityTypeMapping TypeName="SyncModel.sync_log">
+        <MappingFragment StoreEntitySet="sync_log">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Islem" ColumnName="Islem" />
+          <ScalarProperty Name="Seviye" ColumnName="Seviye" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Hata" ColumnName="Hata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sync_status">
+      <EntityTypeMapping TypeName="SyncModel.sync_status">
+        <MappingFragment StoreEntitySet="sync_status">
+          <ScalarProperty Name="Anahtar" ColumnName="Anahtar" />
+          <ScalarProperty Name="Deger" ColumnName="Deger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setup">
+      <EntityTypeMapping TypeName="SyncModel.setup">
+        <MappingFragment StoreEntitySet="setup">
+          <ScalarProperty Name="cari_kargo_ucreti_hesaplama" ColumnName="cari_kargo_ucreti_hesaplama" />
+          <ScalarProperty Name="kapida_odeme_kargo_ucreti" ColumnName="kapida_odeme_kargo_ucreti" />
+          <ScalarProperty Name="kapida_odeme_kargo_alt_limit" ColumnName="kapida_odeme_kargo_alt_limit" />
+          <ScalarProperty Name="kargo_ucreti" ColumnName="kargo_ucreti" />
+          <ScalarProperty Name="kargo_alt_limit" ColumnName="kargo_alt_limit" />
+          <ScalarProperty Name="senet_masraf_tutar" ColumnName="senet_masraf_tutar" />
+          <ScalarProperty Name="tahsilat_mail_alicilar" ColumnName="tahsilat_mail_alicilar" />
+          <ScalarProperty Name="tahsilat_mail_gonder" ColumnName="tahsilat_mail_gonder" />
+          <ScalarProperty Name="siparis_iptal_mail_alicilar" ColumnName="siparis_iptal_mail_alicilar" />
+          <ScalarProperty Name="siparis_iptal_mail_gonder" ColumnName="siparis_iptal_mail_gonder" />
+          <ScalarProperty Name="siparis_mail_alicilar" ColumnName="siparis_mail_alicilar" />
+          <ScalarProperty Name="siparis_mail_gonder" ColumnName="siparis_mail_gonder" />
+          <ScalarProperty Name="banka_html" ColumnName="banka_html" />
+          <ScalarProperty Name="send_mail_password" ColumnName="send_mail_password" />
+          <ScalarProperty Name="send_mail" ColumnName="send_mail" />
+          <ScalarProperty Name="send_mail_server" ColumnName="send_mail_server" />
+          <ScalarProperty Name="guvenli_stok_seviyesi_kontrolu_yap" ColumnName="guvenli_stok_seviyesi_kontrolu_yap" />
+          <ScalarProperty Name="dovizli_fiyatlari_cevir" ColumnName="dovizli_fiyatlari_cevir" />
+          <ScalarProperty Name="musteri_fatura_detay_goster" ColumnName="musteri_fatura_detay_goster" />
+          <ScalarProperty Name="satis_elemani_hesap_makinasi_goster" ColumnName="satis_elemani_hesap_makinasi_goster" />
+          <ScalarProperty Name="musteri_fatura_aciklamasi_goster" ColumnName="musteri_fatura_aciklamasi_goster" />
+          <ScalarProperty Name="sozlesme_html" ColumnName="sozlesme_html" />
+          <ScalarProperty Name="sanal_pos" ColumnName="sanal_pos" />
+          <ScalarProperty Name="siparis_odeme_plani_tipi" ColumnName="siparis_odeme_plani_tipi" />
+          <ScalarProperty Name="satis_elemani_kdv_degistirme" ColumnName="satis_elemani_kdv_degistirme" />
+          <ScalarProperty Name="iletisim_html" ColumnName="iletisim_html" />
+          <ScalarProperty Name="satis_elemani_ozel_fiyat" ColumnName="satis_elemani_ozel_fiyat" />
+          <ScalarProperty Name="odeme_plani_iskonto" ColumnName="odeme_plani_iskonto" />
+          <ScalarProperty Name="sabit_iskonto" ColumnName="sabit_iskonto" />
+          <ScalarProperty Name="msn_invitee" ColumnName="msn_invitee" />
+          <ScalarProperty Name="logoPath" ColumnName="logoPath" />
+          <ScalarProperty Name="vadeli_payplanref" ColumnName="vadeli_payplanref" />
+          <ScalarProperty Name="pesin_payplanref" ColumnName="pesin_payplanref" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fax2" ColumnName="fax2" />
+          <ScalarProperty Name="fax1" ColumnName="fax1" />
+          <ScalarProperty Name="tel2" ColumnName="tel2" />
+          <ScalarProperty Name="tel1" ColumnName="tel1" />
+          <ScalarProperty Name="firma_adres" ColumnName="firma_adres" />
+          <ScalarProperty Name="firma_ismi" ColumnName="firma_ismi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="SyncModel.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="SASNO" ColumnName="SASNO" />
+          <ScalarProperty Name="ORDERLOGISTICID" ColumnName="ORDERLOGISTICID" />
+          <ScalarProperty Name="APPROVESTATE" ColumnName="APPROVESTATE" />
+          <ScalarProperty Name="APPROVE3USERSTATE" ColumnName="APPROVE3USERSTATE" />
+          <ScalarProperty Name="APPROVE2USERSTATE" ColumnName="APPROVE2USERSTATE" />
+          <ScalarProperty Name="APPROVE1USERSTATE" ColumnName="APPROVE1USERSTATE" />
+          <ScalarProperty Name="APPROVE3USERREF" ColumnName="APPROVE3USERREF" />
+          <ScalarProperty Name="APPROVE2USERREF" ColumnName="APPROVE2USERREF" />
+          <ScalarProperty Name="APPROVE1USERREF" ColumnName="APPROVE1USERREF" />
+          <ScalarProperty Name="CLIENT_SHIPINFOREF" ColumnName="CLIENT_SHIPINFOREF" />
+          <ScalarProperty Name="GEO_ACCURACY" ColumnName="GEO_ACCURACY" />
+          <ScalarProperty Name="GEO_ALTITUDE" ColumnName="GEO_ALTITUDE" />
+          <ScalarProperty Name="GEO_LONGITUDE" ColumnName="GEO_LONGITUDE" />
+          <ScalarProperty Name="GEO_LATITUDE" ColumnName="GEO_LATITUDE" />
+          <ScalarProperty Name="CLIENT_EXP" ColumnName="CLIENT_EXP" />
+          <ScalarProperty Name="CLIENT_STATUS" ColumnName="CLIENT_STATUS" />
+          <ScalarProperty Name="PUAN_ONAY" ColumnName="PUAN_ONAY" />
+          <ScalarProperty Name="TOPLAM_PUAN" ColumnName="TOPLAM_PUAN" />
+          <ScalarProperty Name="SEVK_SEKLI_KODU" ColumnName="SEVK_SEKLI_KODU" />
+          <ScalarProperty Name="SEVK_SEKLI" ColumnName="SEVK_SEKLI" />
+          <ScalarProperty Name="SEVK_TARIH" ColumnName="SEVK_TARIH" />
+          <ScalarProperty Name="SEVK_SEHIR" ColumnName="SEVK_SEHIR" />
+          <ScalarProperty Name="SEVK_ADRES" ColumnName="SEVK_ADRES" />
+          <ScalarProperty Name="SEVK_ADRES_TIP" ColumnName="SEVK_ADRES_TIP" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="PAYPLANREF" ColumnName="PAYPLANREF" />
+          <ScalarProperty Name="CLIENT_LOGICALREF" ColumnName="CLIENT_LOGICALREF" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="REPORTNET" ColumnName="REPORTNET" />
+          <ScalarProperty Name="REPORTRATE" ColumnName="REPORTRATE" />
+          <ScalarProperty Name="TRNET" ColumnName="TRNET" />
+          <ScalarProperty Name="TRRATE" ColumnName="TRRATE" />
+          <ScalarProperty Name="TRCURR" ColumnName="TRCURR" />
+          <ScalarProperty Name="NET_TOPLAM" ColumnName="NET_TOPLAM" />
+          <ScalarProperty Name="TOPLAM_KDV" ColumnName="TOPLAM_KDV" />
+          <ScalarProperty Name="TOPLAM_EKVERGI" ColumnName="TOPLAM_EKVERGI" />
+          <ScalarProperty Name="KARGO_TUTAR" ColumnName="KARGO_TUTAR" />
+          <ScalarProperty Name="KAPIDA_ODEME_TUTAR" ColumnName="KAPIDA_ODEME_TUTAR" />
+          <ScalarProperty Name="ISKONTOLU_TUTAR" ColumnName="ISKONTOLU_TUTAR" />
+          <ScalarProperty Name="ISKONTO_TOPLAM" ColumnName="ISKONTO_TOPLAM" />
+          <ScalarProperty Name="ISKONTO_ORAN_2" ColumnName="ISKONTO_ORAN_2" />
+          <ScalarProperty Name="ISKONTO_ORAN" ColumnName="ISKONTO_ORAN" />
+          <ScalarProperty Name="TOPLAM" ColumnName="TOPLAM" />
+          <ScalarProperty Name="SLSMANREF" ColumnName="SLSMANREF" />
+          <ScalarProperty Name="CLIENTREF" ColumnName="CLIENTREF" />
+          <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="B2B_ORDER_TYPE" ColumnName="B2B_ORDER_TYPE" />
+          <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="virtualpos_trans">
+      <EntityTypeMapping TypeName="SyncModel.virtualpos_trans">
+        <MappingFragment StoreEntitySet="virtualpos_trans">
+          <ScalarProperty Name="orderref" ColumnName="orderref" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="client_logicalref2" ColumnName="client_logicalref2" />
+          <ScalarProperty Name="client_logicalref1" ColumnName="client_logicalref1" />
+          <ScalarProperty Name="mderrmsg" ColumnName="mderrmsg" />
+          <ScalarProperty Name="mdstatus" ColumnName="mdstatus" />
+          <ScalarProperty Name="response" ColumnName="response" />
+          <ScalarProperty Name="hostrefnum" ColumnName="hostrefnum" />
+          <ScalarProperty Name="authcode" ColumnName="authcode" />
+          <ScalarProperty Name="tranid" ColumnName="tranid" />
+          <ScalarProperty Name="cardholder" ColumnName="cardholder" />
+          <ScalarProperty Name="maskedpan" ColumnName="maskedpan" />
+          <ScalarProperty Name="reportnet" ColumnName="reportnet" />
+          <ScalarProperty Name="reportrate" ColumnName="reportrate" />
+          <ScalarProperty Name="trnet" ColumnName="trnet" />
+          <ScalarProperty Name="trrate" ColumnName="trrate" />
+          <ScalarProperty Name="trcurr" ColumnName="trcurr" />
+          <ScalarProperty Name="toplam" ColumnName="toplam" />
+          <ScalarProperty Name="anapara" ColumnName="anapara" />
+          <ScalarProperty Name="taksit_sayi" ColumnName="taksit_sayi" />
+          <ScalarProperty Name="vclientid" ColumnName="vclientid" />
+          <ScalarProperty Name="vtaksitref" ColumnName="vtaksitref" />
+          <ScalarProperty Name="logobankaccref" ColumnName="logobankaccref" />
+          <ScalarProperty Name="vposref" ColumnName="vposref" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="cyphcode" ColumnName="cyphcode" />
+          <ScalarProperty Name="slsmanref" ColumnName="slsmanref" />
+          <ScalarProperty Name="subclientref" ColumnName="subclientref" />
+          <ScalarProperty Name="clientref" ColumnName="clientref" />
+          <ScalarProperty Name="logicalref" ColumnName="logicalref" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_details">
+      <EntityTypeMapping TypeName="SyncModel.order_details">
+        <MappingFragment StoreEntitySet="order_details">
+          <ScalarProperty Name="KAMPAYALI_URUN_MU" ColumnName="KAMPAYALI_URUN_MU" />
+          <ScalarProperty Name="CAMPAIGNREF" ColumnName="CAMPAIGNREF" />
+          <ScalarProperty Name="PARENTITEMREF" ColumnName="PARENTITEMREF" />
+          <ScalarProperty Name="OFFERLINEREF" ColumnName="OFFERLINEREF" />
+          <ScalarProperty Name="OFFERREF" ColumnName="OFFERREF" />
+          <ScalarProperty Name="DISCOUNT_LIST" ColumnName="DISCOUNT_LIST" />
+          <ScalarProperty Name="KAZANILAN_PUAN" ColumnName="KAZANILAN_PUAN" />
+          <ScalarProperty Name="LINEEXP" ColumnName="LINEEXP" />
+          <ScalarProperty Name="CLOSED" ColumnName="CLOSED" />
+          <ScalarProperty Name="ADDTAXAMOUNT" ColumnName="ADDTAXAMOUNT" />
+          <ScalarProperty Name="ADDTAXCONVFACT" ColumnName="ADDTAXCONVFACT" />
+          <ScalarProperty Name="ADDTAXRATE" ColumnName="ADDTAXRATE" />
+          <ScalarProperty Name="VATINC" ColumnName="VATINC" />
+          <ScalarProperty Name="SEVK_TARIH" ColumnName="SEVK_TARIH" />
+          <ScalarProperty Name="CLIENT_LOGICALREF" ColumnName="CLIENT_LOGICALREF" />
+          <ScalarProperty Name="SEVKEDILEN_MIKTAR" ColumnName="SEVKEDILEN_MIKTAR" />
+          <ScalarProperty Name="REPORTRATE" ColumnName="REPORTRATE" />
+          <ScalarProperty Name="TRRATE" ColumnName="TRRATE" />
+          <ScalarProperty Name="TRCURR" ColumnName="TRCURR" />
+          <ScalarProperty Name="PRPRICE" ColumnName="PRPRICE" />
+          <ScalarProperty Name="PRRATE" ColumnName="PRRATE" />
+          <ScalarProperty Name="PRCURR" ColumnName="PRCURR" />
+          <ScalarProperty Name="NET_TUTAR" ColumnName="NET_TUTAR" />
+          <ScalarProperty Name="KDV_TUTAR" ColumnName="KDV_TUTAR" />
+          <ScalarProperty Name="ISKONTO_TUTAR" ColumnName="ISKONTO_TUTAR" />
+          <ScalarProperty Name="SATIS_FIYAT" ColumnName="SATIS_FIYAT" />
+          <ScalarProperty Name="CUR" ColumnName="CUR" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="UINFO2" ColumnName="UINFO2" />
+          <ScalarProperty Name="UINFO1" ColumnName="UINFO1" />
+          <ScalarProperty Name="UOMREF" ColumnName="UOMREF" />
+          <ScalarProperty Name="SOURCEINDEX" ColumnName="SOURCEINDEX" />
+          <ScalarProperty Name="PAYMENTREF" ColumnName="PAYMENTREF" />
+          <ScalarProperty Name="SERILOTCODE" ColumnName="SERILOTCODE" />
+          <ScalarProperty Name="VARIANTREF" ColumnName="VARIANTREF" />
+          <ScalarProperty Name="ITEMREF" ColumnName="ITEMREF" />
+          <ScalarProperty Name="ORDERREF" ColumnName="ORDERREF" />
+          <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clcard">
+      <EntityTypeMapping TypeName="SyncModel.clcard">
+        <MappingFragment StoreEntitySet="clcard">
+          <ScalarProperty Name="CRM_DURUM" ColumnName="CRM_DURUM" />
+          <ScalarProperty Name="LOGOURL" ColumnName="LOGOURL" />
+          <ScalarProperty Name="VADE_KONTROLU_YAPMA" ColumnName="VADE_KONTROLU_YAPMA" />
+          <ScalarProperty Name="TRADINGGRP" ColumnName="TRADINGGRP" />
+          <ScalarProperty Name="XML_IP" ColumnName="XML_IP" />
+          <ScalarProperty Name="PARENTCLREF" ColumnName="PARENTCLREF" />
+          <ScalarProperty Name="STATIC_IP" ColumnName="STATIC_IP" />
+          <ScalarProperty Name="MIN_SIPARIS_TUTAR" ColumnName="MIN_SIPARIS_TUTAR" />
+          <ScalarProperty Name="SIPARIS_VEREBILIR" ColumnName="SIPARIS_VEREBILIR" />
+          <ScalarProperty Name="USER_MAIL" ColumnName="USER_MAIL" />
+          <ScalarProperty Name="IS_LICENCED" ColumnName="IS_LICENCED" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="INVENNO" ColumnName="INVENNO" />
+          <ScalarProperty Name="IS_SUPPLIER" ColumnName="IS_SUPPLIER" />
+          <ScalarProperty Name="ITEM_GROUP_SECURITY" ColumnName="ITEM_GROUP_SECURITY" />
+          <ScalarProperty Name="NEED_PASS_CHANGE" ColumnName="NEED_PASS_CHANGE" />
+          <ScalarProperty Name="SPECODE5" ColumnName="SPECODE5" />
+          <ScalarProperty Name="SPECODE4" ColumnName="SPECODE4" />
+          <ScalarProperty Name="SPECODE3" ColumnName="SPECODE3" />
+          <ScalarProperty Name="SPECODE2" ColumnName="SPECODE2" />
+          <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+          <ScalarProperty Name="RISKTYPES1" ColumnName="RISKTYPES1" />
+          <ScalarProperty Name="CSTCSRISKLIMIT" ColumnName="CSTCSRISKLIMIT" />
+          <ScalarProperty Name="CSTCSRISKTOTAL" ColumnName="CSTCSRISKTOTAL" />
+          <ScalarProperty Name="SENET1_DEBIT" ColumnName="SENET1_DEBIT" />
+          <ScalarProperty Name="SENET0_DEBIT" ColumnName="SENET0_DEBIT" />
+          <ScalarProperty Name="CEK1_DEBIT" ColumnName="CEK1_DEBIT" />
+          <ScalarProperty Name="CEK0_DEBIT" ColumnName="CEK0_DEBIT" />
+          <ScalarProperty Name="ACCCOLLATERAL" ColumnName="ACCCOLLATERAL" />
+          <ScalarProperty Name="ACCRISKBALANCED" ColumnName="ACCRISKBALANCED" />
+          <ScalarProperty Name="ACCRISKLIMIT" ColumnName="ACCRISKLIMIT" />
+          <ScalarProperty Name="ACCRISKTOTAL" ColumnName="ACCRISKTOTAL" />
+          <ScalarProperty Name="RISKTOTAL" ColumnName="RISKTOTAL" />
+          <ScalarProperty Name="PAYMENTREF" ColumnName="PAYMENTREF" />
+          <ScalarProperty Name="DISCRATE" ColumnName="DISCRATE" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+          <ScalarProperty Name="EMAILADDR" ColumnName="EMAILADDR" />
+          <ScalarProperty Name="INCHARGE" ColumnName="INCHARGE" />
+          <ScalarProperty Name="TAXOFFICE" ColumnName="TAXOFFICE" />
+          <ScalarProperty Name="TAXNR" ColumnName="TAXNR" />
+          <ScalarProperty Name="FAXNR" ColumnName="FAXNR" />
+          <ScalarProperty Name="TELNRS2" ColumnName="TELNRS2" />
+          <ScalarProperty Name="TELNRS1" ColumnName="TELNRS1" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="ADDR2" ColumnName="ADDR2" />
+          <ScalarProperty Name="ADDR1" ColumnName="ADDR1" />
+          <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+          <ScalarProperty Name="DEFINITION_" ColumnName="DEFINITION_" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="SyncModel.items">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="UNITCOST" ColumnName="UNITCOST" />
+          <ScalarProperty Name="ACTIVATED_DATE" ColumnName="ACTIVATED_DATE" />
+          <ScalarProperty Name="MODIFIED_DATE" ColumnName="MODIFIED_DATE" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="EXTRACOSTEXCCLIENTS" ColumnName="EXTRACOSTEXCCLIENTS" />
+          <ScalarProperty Name="EXTRACOSTITEMCODE" ColumnName="EXTRACOSTITEMCODE" />
+          <ScalarProperty Name="EXTRACOSTFACTOR" ColumnName="EXTRACOSTFACTOR" />
+          <ScalarProperty Name="EFFECTKDV" ColumnName="EFFECTKDV" />
+          <ScalarProperty Name="ADDTAXAMOUNT" ColumnName="ADDTAXAMOUNT" />
+          <ScalarProperty Name="ADDTAXRATE" ColumnName="ADDTAXRATE" />
+          <ScalarProperty Name="HAFTANIN_URUNU_SIRA" ColumnName="HAFTANIN_URUNU_SIRA" />
+          <ScalarProperty Name="DETAIL_HTML" ColumnName="DETAIL_HTML" />
+          <ScalarProperty Name="B2CCODE" ColumnName="B2CCODE" />
+          <ScalarProperty Name="NAME4" ColumnName="NAME4" />
+          <ScalarProperty Name="NAME3" ColumnName="NAME3" />
+          <ScalarProperty Name="MIN_SIPARIS_MIKTAR_BOLUNEMEZ" ColumnName="MIN_SIPARIS_MIKTAR_BOLUNEMEZ" />
+          <ScalarProperty Name="MIN_SIPARIS_MIKTAR" ColumnName="MIN_SIPARIS_MIKTAR" />
+          <ScalarProperty Name="DETAIL_TEXT" ColumnName="DETAIL_TEXT" />
+          <ScalarProperty Name="PUAN_YENI_URUN_FIYAT_CARPAN" ColumnName="PUAN_YENI_URUN_FIYAT_CARPAN" />
+          <ScalarProperty Name="PUAN_YENI_URUN_SABIT_PUAN" ColumnName="PUAN_YENI_URUN_SABIT_PUAN" />
+          <ScalarProperty Name="PUAN_YENI_URUN_TIP" ColumnName="PUAN_YENI_URUN_TIP" />
+          <ScalarProperty Name="PUAN_FIYAT_CARPAN" ColumnName="PUAN_FIYAT_CARPAN" />
+          <ScalarProperty Name="SHOW_IN_HAFTANIN_URUNU" ColumnName="SHOW_IN_HAFTANIN_URUNU" />
+          <ScalarProperty Name="SHOW_IN_VITRIN" ColumnName="SHOW_IN_VITRIN" />
+          <ScalarProperty Name="EXTACCESSFLAGS" ColumnName="EXTACCESSFLAGS" />
+          <ScalarProperty Name="TAGS" ColumnName="TAGS" />
+          <ScalarProperty Name="SPECODE5" ColumnName="SPECODE5" />
+          <ScalarProperty Name="SPECODE4" ColumnName="SPECODE4" />
+          <ScalarProperty Name="SPECODE3" ColumnName="SPECODE3" />
+          <ScalarProperty Name="SPECODE2" ColumnName="SPECODE2" />
+          <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="SAFE_LEVEL" ColumnName="SAFE_LEVEL" />
+          <ScalarProperty Name="ACTIVE_PURCHASE_ORDER" ColumnName="ACTIVE_PURCHASE_ORDER" />
+          <ScalarProperty Name="ACTIVE_SALES_ORDER" ColumnName="ACTIVE_SALES_ORDER" />
+          <ScalarProperty Name="AMOUNT_IN_STOK" ColumnName="AMOUNT_IN_STOK" />
+          <ScalarProperty Name="UNITSETREF" ColumnName="UNITSETREF" />
+          <ScalarProperty Name="UNITCONVERTRATE" ColumnName="UNITCONVERTRATE" />
+          <ScalarProperty Name="UNIT2" ColumnName="UNIT2" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="MAKE" ColumnName="MAKE" />
+          <ScalarProperty Name="CANCONFIGURE" ColumnName="CANCONFIGURE" />
+          <ScalarProperty Name="PRODUCERCODE" ColumnName="PRODUCERCODE" />
+          <ScalarProperty Name="STGRPCODE" ColumnName="STGRPCODE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="PAYMENTREF" ColumnName="PAYMENTREF" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="CARDTYPE" ColumnName="CARDTYPE" />
+          <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="slsman">
+      <EntityTypeMapping TypeName="SyncModel.slsman">
+        <MappingFragment StoreEntitySet="slsman">
+          <ScalarProperty Name="PRCLIST_PRIORITY" ColumnName="PRCLIST_PRIORITY" />
+          <ScalarProperty Name="EMAIL_ADDR" ColumnName="EMAIL_ADDR" />
+          <ScalarProperty Name="STATIC_IP" ColumnName="STATIC_IP" />
+          <ScalarProperty Name="TELNUMBER" ColumnName="TELNUMBER" />
+          <ScalarProperty Name="PICTURE_URL" ColumnName="PICTURE_URL" />
+          <ScalarProperty Name="FAIZ_UYGULANSINMI" ColumnName="FAIZ_UYGULANSINMI" />
+          <ScalarProperty Name="IS_LICENCED" ColumnName="IS_LICENCED" />
+          <ScalarProperty Name="RELATED_CLIENTREF" ColumnName="RELATED_CLIENTREF" />
+          <ScalarProperty Name="SLSMAN_TYPE" ColumnName="SLSMAN_TYPE" />
+          <ScalarProperty Name="INVENNO" ColumnName="INVENNO" />
+          <ScalarProperty Name="ITEM_GROUP_SECURITY" ColumnName="ITEM_GROUP_SECURITY" />
+          <ScalarProperty Name="MAKBUZ_NO_LAST" ColumnName="MAKBUZ_NO_LAST" />
+          <ScalarProperty Name="MAKBUZ_NO_PREFIX" ColumnName="MAKBUZ_NO_PREFIX" />
+          <ScalarProperty Name="CAN_USE_VPOS" ColumnName="CAN_USE_VPOS" />
+          <ScalarProperty Name="IS_SUPERSLSMAN" ColumnName="IS_SUPERSLSMAN" />
+          <ScalarProperty Name="IS_SUPERVISOR" ColumnName="IS_SUPERVISOR" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="CYPHCODE" ColumnName="CYPHCODE" />
+          <ScalarProperty Name="SPECODE" ColumnName="SPECODE" />
+          <ScalarProperty Name="DEFINITION_" ColumnName="DEFINITION_" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="LOGICALREF" ColumnName="LOGICALREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="virtualpos">
+      <EntityTypeMapping TypeName="SyncModel.virtualpos">
+        <MappingFragment StoreEntitySet="virtualpos">
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="BINEXTRA" ColumnName="BINEXTRA" />
+          <ScalarProperty Name="TEKCEKIMVARMI" ColumnName="TEKCEKIMVARMI" />
+          <ScalarProperty Name="ANARENK" ColumnName="ANARENK" />
+          <ScalarProperty Name="PAYPLANCODE" ColumnName="PAYPLANCODE" />
+          <ScalarProperty Name="FLAGS" ColumnName="FLAGS" />
+          <ScalarProperty Name="DEFAULTVPOS" ColumnName="DEFAULTVPOS" />
+          <ScalarProperty Name="ISVPOSQNBFINANSBANK" ColumnName="ISVPOSQNBFINANSBANK" />
+          <ScalarProperty Name="ISKUVEYT" ColumnName="ISKUVEYT" />
+          <ScalarProperty Name="ISVAKIF" ColumnName="ISVAKIF" />
+          <ScalarProperty Name="ISORTAKODEME" ColumnName="ISORTAKODEME" />
+          <ScalarProperty Name="ISIPAY" ColumnName="ISIPAY" />
+          <ScalarProperty Name="ISGARANTI" ColumnName="ISGARANTI" />
+          <ScalarProperty Name="ISPOSNET" ColumnName="ISPOSNET" />
+          <ScalarProperty Name="IS3D" ColumnName="IS3D" />
+          <ScalarProperty Name="VADEFARKI" ColumnName="VADEFARKI" />
+          <ScalarProperty Name="QUERYTRANSURL" ColumnName="QUERYTRANSURL" />
+          <ScalarProperty Name="D3GATEURL" ColumnName="D3GATEURL" />
+          <ScalarProperty Name="APIGATEURL" ColumnName="APIGATEURL" />
+          <ScalarProperty Name="IMAGEURL" ColumnName="IMAGEURL" />
+          <ScalarProperty Name="STOREKEY" ColumnName="STOREKEY" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="TERMINALNO" ColumnName="TERMINALNO" />
+          <ScalarProperty Name="SHOPNO" ColumnName="SHOPNO" />
+          <ScalarProperty Name="BANKACCREF" ColumnName="BANKACCREF" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="VPOSREF" ColumnName="VPOSREF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

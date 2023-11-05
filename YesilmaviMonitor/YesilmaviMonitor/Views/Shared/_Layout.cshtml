@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Monitor System | Yeşilmavi Yazılım</title>
+    @*@Styles.Render("~/Tema/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+    <link rel="stylesheet" type="text/css" href="~/Tema/js/datatables/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Tema/js/datatables/select.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Tema/js/datatables/fixedColumns.bootstrap4.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Tema/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    @RenderBody()
+                </div>
+
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Yeşilmavi Yazılım - Monitor System</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/tema/js/jquery-3.6.0.min.js"></script>
+    <script src="~/tema/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/tema/js/jquery-nicescroll/jquery.nicescroll.min.js"></script>
+
+
+
+    <!-- datatables -->
+    <script src="~/tema/js/datatables/datatables.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+    <script src="~/tema/js/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/tema/js/datatables/buttons.flash.min.js"></script>
+    <script src="~/tema/js/datatables/jszip.min.js"></script>
+    <script src="~/tema/js/datatables/pdfmake.min.js"></script>
+    <script src="~/tema/js/datatables/vfs_fonts.js"></script>
+    <script src="~/tema/js/datatables/buttons.html5.min.js"></script>
+    <script src="~/tema/js/datatables/buttons.print.min.js"></script>
+
+    <!-- fixedHeader -->
+    <script src="~/tema/js/datatables/dataTables.fixedHeader.min.js"></script>
+
+    <!-- dataTables select -->
+    <script src="~/tema/js/datatables/dataTables.select.min.js"></script>
+
+    <!-- dataTables.fixedColumns.min -->
+    <script src="~/tema/js/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <!-- dataTables.rowGroup.min -->
+    <script src="~/tema/js/datatables/dataTables.rowGroup.min.js"></script>
+
+    <script src="~/tema/js/custom.js"></script>
+
+    @*@Scripts.Render("~/tema/js")*@
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    @*@RenderSection("scripts", required: false)*@
+</body>
+</html>
